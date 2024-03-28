@@ -1,5 +1,8 @@
+done it right way
+
+
+Yes
 
 
 
-
-Yes lets just do it 
+yupsy
