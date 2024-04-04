@@ -27,6 +27,9 @@ public class UserE extends BaseE {
 	@Column(name = "DOB", length = 200)
 	private String dob;
 
+	@Column(name="MIDDLE_NAME", length = 200)
+	private String middlename;
+
 /*	@Column(name = "Device_ID", length = 200)
 	private String deviceid;
 
@@ -42,6 +45,14 @@ public class UserE extends BaseE {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+
+	public String getMiddlename() {
+		return middlename;
+	}
+
+	public void setMiddlename(String middlename) {
+		this.middlename = middlename;
 	}
 
 	public String getLastName() {
