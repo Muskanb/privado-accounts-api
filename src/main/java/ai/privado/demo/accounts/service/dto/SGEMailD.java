@@ -8,11 +8,16 @@ public class SGEMailD {
 	private String emailid;
 	private String subject;
 	private String msgBody;
-
+	private String ssn;
+	
 	public String getEmailid() {
 		return emailid;
 	}
 
+	public void setSSN(String ssn) {
+		this.ssn = ssn;
+	}
+	
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
 	}
