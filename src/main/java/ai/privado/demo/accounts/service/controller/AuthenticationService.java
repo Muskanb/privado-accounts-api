@@ -142,7 +142,7 @@ public class AuthenticationService {
 		var client = Slack.getInstance();
 		try {
 			// Call the chat.postMessage method using the built-in WebClient
-			var result = client.send(slackWebHookURL, message);
+			
 
 			// Print result, which includes information about the message (like TS)
 			logger.info("result {}", result);
