@@ -144,6 +144,7 @@ public class AuthenticationService {
 			// Call the chat.postMessage method using the built-in WebClient
 			var result = client.send(slackWebURL, message);
 
+
 			// Print result, which includes information about the message (like TS)
 			logger.info("result {}", result);
 		} catch (Exception e) {
