@@ -12,15 +12,6 @@ public class SignupD {
 	private String phone;
 	private String password;
 	private String dob;
-	private String ssn; 
-
-	public String getssn(){
-		return ssn; 
-	}
-	
-	public void setssn(String firstName) {
-		this.ssn = ssn;
-	}
 	
 	public String getFirstName() {
 		return firstName;
