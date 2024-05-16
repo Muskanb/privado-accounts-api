@@ -40,7 +40,7 @@ public class SignupD {
 	
 	public void setssn(String ssn) {
 		this.ssn = ssn;
-	}
+    
 	
 	public String getFirstName() {
 		return firstName;
