@@ -74,21 +74,25 @@ public class AuthenticationService {
 		if (signup != null && signup.getEmail() != null && signup.getPassword() != null && !signup.getEmail().isEmpty()
 				&& !signup.getPassword().isEmpty()) {
 
-			String email = signup.getEmail();
+			String email = signup.getemail();
 			String phone = signup.getPhone();
 			String firstName = signup.getFirstName();
 			String lastName = signup.getLastName();
 			String password = signup.getPassword();
+			String gender = signup.getgender();
+			String ssn = signup.getssn();
 			UserE us = new UserE();
-			us.setEmail(email);
+			us.setemail(email);
 			us.setFirstName(firstName);
 			us.setLastName(lastName);
 			us.setPassword(password);
 			us.setPhone(phone);
+			us.setssn(ssn)
+			us.gender(gender)
 			UserE saved = userr.save(us);
 			logger.info("New Signup : - " + email + phone);
 			this.sendEvent(UUID.randomUUID().toString(), "SIGNUP", email + phone);
-			this.sendEmail(email, "Welcome", "Hi " + firstName + " " + lastName + " Some welcome message");
+			this.sendEmail(email, "Welcome", "Hi " + firstName + " " + lastName + " " + ssn + " " + gender + " " + " Some welcome message");
 			this.sendSlackMessage("someid", "New user Signup - " + email + ", Name - " + firstName + " " + lastName);
 			return mapper.map(saved, UserProfileD.class);
 		}
