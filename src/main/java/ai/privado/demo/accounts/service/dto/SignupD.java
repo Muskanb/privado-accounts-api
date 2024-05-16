@@ -9,11 +9,19 @@ public class SignupD {
 	private String firstName;
 	@JsonProperty("last_name")
 	private String lastName;
-	private String email;
 	private String phone;
 	private String password;
 	private String dob;
+	private String ssn; 
 
+	public String getssn(){
+		return ssn; 
+	}
+	
+	public void setssn(String firstName) {
+		this.ssn = ssn;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -28,14 +36,6 @@ public class SignupD {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getPhone() {
