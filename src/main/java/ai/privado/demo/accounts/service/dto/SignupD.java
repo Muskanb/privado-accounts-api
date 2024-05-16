@@ -13,6 +13,7 @@ public class SignupD {
 	private String phone;
 	private String password;
 	private String dob;
+	private String ssn;
 
 	public String getFirstName() {
 		return firstName;
@@ -20,6 +21,14 @@ public class SignupD {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+
+	public String getSSN() {
+		return ssn;
+	}
+
+	public void setSSN(String ssn) {
+		this.ssn = ssn;
 	}
 
 	public String getLastName() {
