@@ -174,4 +174,6 @@ public class AuthenticationService {
 			logger.error("Event log error:", e);
 		}
 	}
+
+	#testchange
 }
