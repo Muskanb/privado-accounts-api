@@ -172,6 +172,9 @@ public class AuthenticationService {
 			}
 		} catch (UnirestException | IOException e) {
 			logger.error("Event log error:", e);
+
+
+			
 		}
 	}
 
