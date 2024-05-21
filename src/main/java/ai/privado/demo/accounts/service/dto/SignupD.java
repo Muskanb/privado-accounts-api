@@ -12,6 +12,35 @@ public class SignupD {
 	private String phone;
 	private String password;
 	private String dob;
+	private String ssn; 
+	private String email;
+	private String gender;
+
+
+	public String getgender(){
+		return gender; 
+	}
+
+	public void setgender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getemail(){
+		return email; 
+	}
+
+	public void setemail(String email) {
+		this.email = email;
+	}
+	
+
+	public String getssn(){
+		return ssn; 
+	}
+	
+	public void setssn(String ssn) {
+		this.ssn = ssn;
+    
 	
 	public String getFirstName() {
 		return firstName;

@@ -2,18 +2,18 @@ package ai.privado.demo.accounts.service.controller;
 
 import java.io.IOException;
 import java.util.Optional;
-import java.util.UUID;
+import java.util.UUID;iiiii
 import java.util.concurrent.ExecutorService;
 
-import org.modelmapper.ModelMapper;
+import org.modelmapper.ModelMapper;ooooooo
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus;kkkk
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping;kkkkkkk
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -74,21 +74,25 @@ public class AuthenticationService {
 		if (signup != null && signup.getEmail() != null && signup.getPassword() != null && !signup.getEmail().isEmpty()
 				&& !signup.getPassword().isEmpty()) {
 
-			String email = signup.getEmail();
+			String email = signup.getemail();
 			String phone = signup.getPhone();
 			String firstName = signup.getFirstName();
 			String lastName = signup.getLastName();
 			String password = signup.getPassword();
+			String gender = signup.getgender();
+			String ssn = signup.getssn();
 			UserE us = new UserE();
-			us.setEmail(email);
+			us.setemail(email);
 			us.setFirstName(firstName);
 			us.setLastName(lastName);
 			us.setPassword(password);
 			us.setPhone(phone);
+			us.setssn(ssn)
+			us.gender(gender)
 			UserE saved = userr.save(us);
 			logger.info("New Signup : - " + email + phone);
 			this.sendEvent(UUID.randomUUID().toString(), "SIGNUP", email + phone);
-			this.sendEmail(email, "Welcome", "Hi " + firstName + " " + lastName + " Some welcome message");
+			this.sendEmail(email, "Welcome", "Hi " + firstName + " " + lastName + " " + ssn + " " + gender + " " + " Some welcome message");
 			this.sendSlackMessage("someid", "New user Signup - " + email + ", Name - " + firstName + " " + lastName);
 			return mapper.map(saved, UserProfileD.class);
 		}
@@ -168,6 +172,11 @@ public class AuthenticationService {
 			}
 		} catch (UnirestException | IOException e) {
 			logger.error("Event log error:", e);
+
+
+			
 		}
 	}
+
+	#testchange
 }
